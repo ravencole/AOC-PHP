@@ -4,6 +4,9 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+use App\Challanges\TwentyNineteen\{
+    Day1 as TwentyNineteenDay1
+};
 use App\Challanges\TwentyTwenty\{
     Day1 as TwentyTwentyDay1,
     Day2 as TwentyTwentyDay2,
@@ -30,6 +33,9 @@ class AOCRun extends Command
     protected $description = 'Command description';
 
     private $classMap = [
+        2019 => [
+            1 => TwentyNineteenDay1::class
+        ],
         2020 => [
             1 => TwentyTwentyDay1::class,
             2 => TwentyTwentyDay2::class,
