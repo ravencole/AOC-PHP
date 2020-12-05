@@ -2,8 +2,12 @@
 
 namespace App\Challanges\TwentyTwenty;
 
-class Day5
+use App\Challanges\ChallangeBase;
+
+class Day5 extends ChallangeBase
 {
+    public $mustRunBothChallanges = true;
+
     private $input;
 
     private $total_columns = 127;

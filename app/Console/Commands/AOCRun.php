@@ -9,7 +9,8 @@ use App\Challanges\TwentyTwenty\{
     Day2 as TwentyTwentyDay2,
     Day3 as TwentyTwentyDay3,
     Day4 as TwentyTwentyDay4,
-    Day5 as TwentyTwentyDay5
+    Day5 as TwentyTwentyDay5,
+    Day6 as TwentyTwentyDay6
 };
 
 class AOCRun extends Command
@@ -34,7 +35,8 @@ class AOCRun extends Command
             2 => TwentyTwentyDay2::class,
             3 => TwentyTwentyDay3::class,
             4 => TwentyTwentyDay4::class,
-            5 => TwentyTwentyDay5::class
+            5 => TwentyTwentyDay5::class,
+            6 => TwentyTwentyDay6::class
         ]
     ];
 
@@ -72,10 +74,10 @@ class AOCRun extends Command
         if($this->benchmark)
             $this->start_time = microtime(TRUE);
 
-        if(! $this->part || $this->part === 1)
+        if(! $this->part || $this->part === 1 || $class->mustRunBothChallanges)
             $this->info("Part 1: " . $class->handlePart1());
 
-        if(! $this->part || $this->part === 2)
+        if(! $this->part || $this->part === 2 || $class->mustRunBothChallanges)
             $this->info("Part 2: " . $class->handlePart2());
 
         if($this->benchmark) {

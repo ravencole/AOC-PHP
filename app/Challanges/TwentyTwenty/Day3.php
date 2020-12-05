@@ -2,7 +2,9 @@
 
 namespace App\Challanges\TwentyTwenty;
 
-class Day3
+use App\Challanges\ChallangeBase;
+
+class Day3 extends ChallangeBase
 {
     private $input;
 
