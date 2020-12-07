@@ -17,17 +17,11 @@ class Day6 extends ChallangeBase
 
     public function handlePart1()
     {
-        $count = 0;
-
-        foreach($this->input as $group) {
-            $yeses = array_reduce($group, function($a, $b) {
-                return array_merge($a, str_split($b));
-            }, []);
-
-            $count += count(array_unique($yeses));
-        }
-
-        return $count;
+        return array_reduce($this->input, function($a, $b) {
+            return $a + count(array_unique(array_reduce($b, function($c, $d) {
+                return array_merge($c, str_split($d));
+            }, [])));
+        }, 0);
     }
 
     public function handlePart2()

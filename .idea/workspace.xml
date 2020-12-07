@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="" />
+    <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day1.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day3.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day4.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day5.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day6.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/inputs/day_6_2020.txt" beforeDir="false" afterPath="$PROJECT_DIR$/storage/inputs/day_6_2020.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,13 +146,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Challanges/TwentyTwenty" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Challanges/TwentyNineteen" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Challanges/TwentyNineteen" />
+      <recent name="$PROJECT_DIR$/storage/inputs" />
       <recent name="$PROJECT_DIR$/app/Challanges/TwentyTwenty" />
     </key>
   </component>
@@ -167,6 +179,7 @@
       <workItem from="1607001157093" duration="1148000" />
       <workItem from="1607085333373" duration="3283000" />
       <workItem from="1607088877943" duration="548000" />
+      <workItem from="1607176947439" duration="18269000" />
     </task>
     <servers />
   </component>
@@ -174,6 +187,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="539" y="392" key="NewPhpFileDialog" timestamp="1607180355122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="539" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1607180355122" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1606915904261">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -182,9 +199,10 @@
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state x="1964" y="75" key="run.anything.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1606828673079" />
-    <state x="1963" y="-194" width="672" height="678" key="search.everywhere.popup" timestamp="1607088989104">
-      <screen x="1440" y="-517" width="3440" height="1417" />
+    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup" timestamp="1607296667304">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="1963" y="-194" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1607088989104" />
+    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1607296667304" />
   </component>
 </project>

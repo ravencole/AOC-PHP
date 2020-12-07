@@ -16,7 +16,8 @@ use App\Challanges\TwentyTwenty\{
     Day3 as TwentyTwentyDay3,
     Day4 as TwentyTwentyDay4,
     Day5 as TwentyTwentyDay5,
-    Day6 as TwentyTwentyDay6
+    Day6 as TwentyTwentyDay6,
+    Day7 as TwentyTwentyDay7
 };
 
 class AOCRun extends Command
@@ -48,7 +49,8 @@ class AOCRun extends Command
             3 => TwentyTwentyDay3::class,
             4 => TwentyTwentyDay4::class,
             5 => TwentyTwentyDay5::class,
-            6 => TwentyTwentyDay6::class
+            6 => TwentyTwentyDay6::class,
+            7 => TwentyTwentyDay7::class
         ]
     ];
 
