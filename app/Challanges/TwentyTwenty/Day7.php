@@ -17,7 +17,7 @@ class Day7 extends ChallangeBase
         foreach($this->input as $line) {
             preg_match('/^(\w+\s\w+)/', $line, $matches);
             $current_color = $matches[1];
-            $bag_contents = explode(',', explode('contain', $line)[1]);
+            $bag_contents  = explode(',', explode('contain', $line)[1]);
 
             if(! array_key_exists($current_color, $this->bags))
                 $this->bags[$current_color] = [];
@@ -57,16 +57,14 @@ class Day7 extends ChallangeBase
         $to_search = [];
         $count = 0;
 
-        foreach($this->bags['shiny gold'] as $key => $val) {
+        foreach($this->bags['shiny gold'] as $key => $val)
             $to_search = array_merge($to_search, array_fill(0, $val, $key));
-        }
 
         while(! empty($to_search)) {
             $color = array_shift($to_search);
 
-            foreach($this->bags[$color] as $key => $val) {
+            foreach($this->bags[$color] as $key => $val)
                 $to_search = array_merge($to_search, array_fill(0, $val, $key));
-            }
 
             $count++;
         }
@@ -78,10 +76,9 @@ class Day7 extends ChallangeBase
     {
         $has_color = [];
 
-        foreach($bags as $bag => $contents) {
+        foreach($bags as $bag => $contents)
             if(in_array($color, array_keys($contents)))
                 $has_color[] = $bag;
-        }
 
         return $has_color;
     }
