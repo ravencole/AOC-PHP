@@ -3,7 +3,6 @@
 namespace App\Challanges\TwentyTwenty;
 
 use App\Challanges\ChallangeBase;
-use drupol\phpermutations\Generators\Permutations;
 
 class Day14 extends ChallangeBase
 {
@@ -11,27 +10,23 @@ class Day14 extends ChallangeBase
 
     private $mem  = [];
 
-    private $mask = [
-        'ones'  => '',
-        'zeros' => ''
-    ];
+    private $mask = '';
 
     public function __construct($input)
     {
         $this->input = explode("\n", $input);
-//        $this->input = [
-//            'mask = 000000000000000000000000000000X1001X',
-//            'mem[42] = 100',
-//            'mask = 00000000000000000000000000000000X0XX',
-//            'mem[26] = 1'
-//        ];
     }
 
     public function handlePart1()
     {
+        $mask = [];
+
         foreach($this->input as $line) {
             if(preg_match('/^mask = ([01X]+)$/', $line, $matches)) {
-                $this->setMask($matches[1]);
+                $mask = [
+                    'ones'  => intval(str_replace('X', '0', $matches[1]), 2),
+                    'zeros' => intval(str_replace('X', '1', $matches[1]), 2)
+                ];
                 continue;
             }
 
@@ -40,51 +35,39 @@ class Day14 extends ChallangeBase
             $pointer = intval($matches[1][0]);
             $val     = intval($matches[1][1]);
 
-            $val = $this->mask['ones']  | $val;
-            $val = $this->mask['zeros'] & $val;
-
-            $this->mem[$pointer] = $val;
+            $this->mem[$pointer] = $mask['zeros'] & ($mask['ones']  | $val);
         }
 
         return array_sum(array_values($this->mem));
     }
 
-    private function setMask($mask)
-    {
-        $this->mask = [
-            'ones'  => intval(str_replace('X', '0', $mask), 2),
-            'zeros' => intval(str_replace('X', '1', $mask), 2)
-        ];
-    }
-
     public function handlePart2()
     {
-        $this->mask = '';
+        // Reset the memory
         $this->mem  = [];
 
+        // Cycle through all of the lines
         foreach($this->input as $line) {
+            // If we find a mask, overwrite this->mask with it
             if(preg_match('/^mask = ([01X]+)$/', $line, $matches)) {
                 $this->mask = $matches[1];
                 continue;
             }
 
+            // Find the mem addr and value
             preg_match_all('/(\d+)/', $line, $matches);
 
             $pointer = intval($matches[1][0]);
             $val     = intval($matches[1][1]);
 
-            $first_mask = [
-                'ones'  => intval(str_replace('X', '0', $this->mask), 2),
-                'zeros' => intval(str_replace('X', '1', $this->mask), 2)
-            ];
-
-            $pointer = $first_mask['zeros'] & ($first_mask['ones'] | $pointer);
-
+            // Get all of the pointers
             foreach($this->getPointers($pointer) as $pointer) {
+                // The value is added to each of the pointers
                 $this->mem[$pointer] = $val;
             }
         }
 
+        // The answer is all of the values in memory, summed
         return array_sum(array_values($this->mem));
     }
 
@@ -92,38 +75,52 @@ class Day14 extends ChallangeBase
     {
         $pointers = [];
 
+        // Split the mask into an array
         $mask    = str_split($this->mask);
+        // Get the binary of the address and pad it to the same length as the mask
         $address = str_split(str_pad(decbin($pointer), count($mask), '0', STR_PAD_LEFT));
+
         $result  = '';
 
+        // Cycle through each character in the mask
         for($i = 0; $i < count($mask); $i++) {
+            // Leave the xes
             if($mask[$i] === 'X') {
                 $result .= 'X';
                 continue;
             }
 
-            if($mask[$i] === '1' || $address[$i] === '1') {
+            // A 1 in the mask must go into the address
+            if($mask[$i] === '1') {
                 $result .= '1';
                 continue;
             }
 
-            $result .= '0';
+            // All other values in the address stay for now
+            $result .= $address[$i];
         }
 
+        // Get the amount of bits that need to be permutated
         $bit_length = substr_count($result, 'X');
 
+        // Cycle through all of the bits as integer values
         for($i = 0; $i <= intval(str_repeat('1', $bit_length), 2); $i++) {
             $p = '';
+            // Move $i into a binary string
             $bits = str_split(str_pad(decbin($i), $bit_length, '0', STR_PAD_LEFT));
 
+            // Loop though each character of the masked address
             foreach(str_split($result) as $char) {
+                // If its an x, replace it with the first bit in the bits array
                 if($char === 'X') {
                     $p .= array_shift($bits);
                 } else {
+                    // otherwise it stays the same
                     $p .= $char;
                 }
             }
 
+            // add it to the pointers array
             $pointers[] = intval($p, 2);
         }
 
