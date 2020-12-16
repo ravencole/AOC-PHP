@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AOC-PHP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AOC-PHP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day9.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day9.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day15.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day15.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/inputs/day_15_2020.txt" beforeDir="false" afterPath="$PROJECT_DIR$/storage/inputs/day_15_2020.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +131,6 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/drupol/phpermutations" />
     </include_path>
   </component>
   <component name="ProjectId" id="1l3YS6gA6g4YHHizxkOmqv0bADB" />
@@ -193,6 +188,8 @@
       <workItem from="1607877556617" duration="10975000" />
       <workItem from="1607974583984" duration="13605000" />
       <workItem from="1608037369674" duration="3850000" />
+      <workItem from="1608050110174" duration="3062000" />
+      <workItem from="1608081049725" duration="4078000" />
     </task>
     <servers />
   </component>
@@ -220,10 +217,10 @@
       <screen x="1440" y="-517" width="3440" height="1417" />
     </state>
     <state x="1964" y="75" key="run.anything.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1607694091002" />
-    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup" timestamp="1607996015350">
+    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup" timestamp="1608081509532">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="1963" y="-194" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1607607269084" />
-    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1607996015350" />
+    <state x="1963" y="-194" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1608057015757" />
+    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1608081509532" />
   </component>
 </project>
