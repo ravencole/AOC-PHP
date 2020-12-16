@@ -25,7 +25,8 @@ use App\Challanges\TwentyTwenty\{
     Day12 as TwentyTwentyDay12,
     Day13 as TwentyTwentyDay13,
     Day14 as TwentyTwentyDay14,
-    Day15 as TwentyTwentyDay15
+    Day15 as TwentyTwentyDay15,
+    Day16 as TwentyTwentyDay16
 };
 
 class AOCRun extends Command
@@ -35,7 +36,7 @@ class AOCRun extends Command
      *
      * @var string
      */
-    protected $signature = 'aoc:run {--benchmark} {year} {day} {part?}';
+    protected $signature = 'aoc:run {--benchmark} {--progress} {year} {day} {part?}';
 
     /**
      * The console command description.
@@ -66,7 +67,8 @@ class AOCRun extends Command
             12 => TwentyTwentyDay12::class,
             13 => TwentyTwentyDay13::class,
             14 => TwentyTwentyDay14::class,
-            15 => TwentyTwentyDay15::class
+            15 => TwentyTwentyDay15::class,
+            16 => TwentyTwentyDay16::class
         ]
     ];
 
@@ -77,6 +79,8 @@ class AOCRun extends Command
     private $part;
 
     private $benchmark;
+
+    private $progress;
 
     private $start_time;
 
@@ -101,19 +105,24 @@ class AOCRun extends Command
 
         $class = new $this->classMap[$this->year][$this->day]($this->input);
 
+        if($this->progress)
+            $class->showProgress = true;
+
         if($this->benchmark)
             $this->start_time = microtime(TRUE);
 
-        if(! $this->part || $this->part === 1 || $class->mustRunBothChallanges)
+        if(! $this->part || $this->part === 1)
             $this->info("Part 1: " . $class->handlePart1());
 
-        if(! $this->part || $this->part === 2 || $class->mustRunBothChallanges)
-            $this->info("Part 2: " . $class->handlePart2());
+        if(! $this->part || $this->part === 2 || $class->mustRunBothChallanges) {
+            if($class->mustRunBothChallanges && $this->part === 2)
+                $class->handlePart1();
 
-        if($this->benchmark) {
-            $end_time = microtime(TRUE);
-            $this->info("Executed in " . number_format($end_time - $this->start_time, 6) . " seconds");
+            $this->info("Part 2: " . $class->handlePart2());
         }
+
+        if($this->benchmark)
+            $this->info("Executed in " . number_format(microtime(TRUE) - $this->start_time, 6) . " seconds");
 
         return 0;
     }
@@ -124,6 +133,7 @@ class AOCRun extends Command
         $this->day       = $this->argument('day');
         $this->part      = (int) $this->argument('part');
         $this->benchmark = $this->option('benchmark');
+        $this->progress  = $this->option('progress');
 
         $this->input = trim(file_get_contents(storage_path("inputs/day_{$this->day}_{$this->year}.txt")));
     }
