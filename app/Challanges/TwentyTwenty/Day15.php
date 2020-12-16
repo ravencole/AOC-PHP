@@ -25,11 +25,7 @@ class Day15 extends ChallangeBase
     {
         $this->mem = $this->input;
 
-        $tracker = [];
-
-        for($i = 0; $i < count($this->mem); $i ++) {
-            $tracker[$this->mem[$i]] = $i;
-        }
+        $tracker = array_flip($this->mem);
 
         for($i = count($this->mem); $i < $until; $i++) {
             $last = $this->mem[count($this->mem) - 1];
