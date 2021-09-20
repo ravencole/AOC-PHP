@@ -4,12 +4,22 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
+use App\Challanges\TwentyFifteen\{
+    Day1 as TwentyFifteenDay1,
+    Day2 as TwentyFifteenDay2,
+    Day3 as TwentyFifteenDay3,
+    Day4 as TwentyFifteenDay4,
+    Day5 as TwentyFifteenDay5,
+    Day6 as TwentyFifteenDay6,
+};
+
 use App\Challanges\TwentyNineteen\{
     Day1 as TwentyNineteenDay1,
     Day2 as TwentyNineteenDay2,
     Day3 as TwentyNineteenDay3,
     Day4 as TwentyNineteenDay4
 };
+
 use App\Challanges\TwentyTwenty\{
     Day1 as TwentyTwentyDay1,
     Day2 as TwentyTwentyDay2,
@@ -26,7 +36,8 @@ use App\Challanges\TwentyTwenty\{
     Day13 as TwentyTwentyDay13,
     Day14 as TwentyTwentyDay14,
     Day15 as TwentyTwentyDay15,
-    Day16 as TwentyTwentyDay16
+    Day16 as TwentyTwentyDay16,
+    Day17 as TwentyTwentyDay17
 };
 
 class AOCRun extends Command
@@ -36,7 +47,7 @@ class AOCRun extends Command
      *
      * @var string
      */
-    protected $signature = 'aoc:run {--benchmark} {--progress} {year} {day} {part?}';
+    protected $signature = 'aoc:run {--benchmark} {--quite} {--progress} {--rounds=1} {--part=} {--extra1=} {--extra2=} {year} {day}';
 
     /**
      * The console command description.
@@ -46,6 +57,14 @@ class AOCRun extends Command
     protected $description = 'Run your AOC in a totally overpowered environment';
 
     private $classMap = [
+        2015 => [
+            1  => TwentyFifteenDay1::class,
+            2  => TwentyFifteenDay2::class,
+            3  => TwentyFifteenDay3::class,
+            4  => TwentyFifteenDay4::class,
+            5  => TwentyFifteenDay5::class,
+            6  => TwentyFifteenDay6::class,
+        ],
         2019 => [
             1  => TwentyNineteenDay1::class,
             2  => TwentyNineteenDay2::class,
@@ -68,7 +87,8 @@ class AOCRun extends Command
             13 => TwentyTwentyDay13::class,
             14 => TwentyTwentyDay14::class,
             15 => TwentyTwentyDay15::class,
-            16 => TwentyTwentyDay16::class
+            16 => TwentyTwentyDay16::class,
+            17 => TwentyTwentyDay17::class
         ]
     ];
 
@@ -78,21 +98,19 @@ class AOCRun extends Command
 
     private $part;
 
+    private $extra_1;
+
+    private $extra_2;
+
     private $benchmark;
 
     private $progress;
 
     private $start_time;
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    private $rounds;
+
+    private $quite;
 
     /**
      * Execute the console command.
@@ -103,7 +121,11 @@ class AOCRun extends Command
     {
         $this->beforeHandle();
 
-        $class = new $this->classMap[$this->year][$this->day]($this->input);
+
+        $class = new $this->classMap[$this->year][$this->day](
+            $this->input,
+            [$this->extra_1, $this->extra_2]
+        );
 
         if($this->progress)
             $class->showProgress = true;
@@ -111,14 +133,21 @@ class AOCRun extends Command
         if($this->benchmark)
             $this->start_time = microtime(TRUE);
 
-        if(! $this->part || $this->part === 1)
-            $this->info("Part 1: " . $class->handlePart1());
+        $class->_setup($this->input);
 
-        if(! $this->part || $this->part === 2 || $class->mustRunBothChallanges) {
-            if($class->mustRunBothChallanges && $this->part === 2)
-                $class->handlePart1();
+        for($i = 0; $i < $this->rounds; $i++) {
 
-            $this->info("Part 2: " . $class->handlePart2());
+            if(! $this->part || $this->part === 1)
+                if(! $this->quite)
+                    $this->info("Part 1: " . $class->handlePart1());
+
+            if(! $this->part || $this->part === 2 || $class->mustRunBothChallanges) {
+                if($class->mustRunBothChallanges && $this->part === 2)
+                    $class->handlePart1();
+
+                if(! $this->quite)
+                    $this->info("Part 2: " . $class->handlePart2());
+            }
         }
 
         if($this->benchmark)
@@ -131,9 +160,13 @@ class AOCRun extends Command
     {
         $this->year      = $this->argument('year');
         $this->day       = $this->argument('day');
-        $this->part      = (int) $this->argument('part');
+        $this->part      = (int) $this->option('part');
+        $this->rounds    = $this->option('rounds');
+        $this->quite     = $this->option('quite');
         $this->benchmark = $this->option('benchmark');
         $this->progress  = $this->option('progress');
+        $this->extra_1   = $this->option('extra1');
+        $this->extra_2   = $this->option('extra2');
 
         $this->input = trim(file_get_contents(storage_path("inputs/day_{$this->day}_{$this->year}.txt")));
     }

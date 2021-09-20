@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AOC-PHP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AOC-PHP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day15.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day15.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/inputs/day_15_2020.txt" beforeDir="false" afterPath="$PROJECT_DIR$/storage/inputs/day_15_2020.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/ChallangeBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/ChallangeBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/ChallangeInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/ChallangeInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day16.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwenty/Day16.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -145,13 +153,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Challanges/TwentyTwenty" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Challanges/TwentyFifteen" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Challanges/TwentyFifteen" />
+      <recent name="$PROJECT_DIR$/app/Challanges" />
       <recent name="$PROJECT_DIR$/app/Challanges/TwentyTwenty" />
       <recent name="$PROJECT_DIR$/app/Challanges/TwentyNineteen" />
       <recent name="$PROJECT_DIR$/storage/inputs" />
@@ -193,37 +209,17 @@
       <workItem from="1608050110174" duration="3062000" />
       <workItem from="1608081049725" duration="4078000" />
       <workItem from="1608123772625" duration="4315000" />
+      <workItem from="1608140407673" duration="12569000" />
+      <workItem from="1608210269781" duration="3504000" />
+      <workItem from="1608602304004" duration="2361000" />
+      <workItem from="1608643135653" duration="5000" />
+      <workItem from="1631725343339" duration="15237000" />
+      <workItem from="1631882909163" duration="838000" />
+      <workItem from="1632142080774" duration="1220000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="458" y="223" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607996059673">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="458" y="223" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.877@0.23.1440.877" timestamp="1607996059673" />
-    <state x="539" y="392" key="NewPhpFileDialog" timestamp="1607180355122">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="539" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1607180355122" />
-    <state x="221" y="100" key="SettingsEditor" timestamp="1606915904261">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1606915904261" />
-    <state x="1927" y="-122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607607912405">
-      <screen x="1440" y="-517" width="3440" height="1417" />
-    </state>
-    <state x="1927" y="-122" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1607607912405" />
-    <state x="1964" y="75" key="run.anything.popup" timestamp="1607694091002">
-      <screen x="1440" y="-517" width="3440" height="1417" />
-    </state>
-    <state x="1964" y="75" key="run.anything.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1607694091002" />
-    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup" timestamp="1608127526892">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="1963" y="-194" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/1440.-517.3440.1417@1440.-517.3440.1417" timestamp="1608057015757" />
-    <state x="219" y="223" width="672" height="420" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1608127526892" />
   </component>
 </project>

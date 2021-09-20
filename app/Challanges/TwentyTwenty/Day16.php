@@ -3,7 +3,6 @@
 namespace App\Challanges\TwentyTwenty;
 
 use App\Challanges\ChallangeBase;
-use drupol\phpermutations\Generators\Permutations;
 
 class Day16 extends ChallangeBase
 {
@@ -86,7 +85,7 @@ class Day16 extends ChallangeBase
 
             if($this->showProgress) {
                 echo "\rValid: {$vcount} / Invalid: {$icount}";
-//                usleep(20000);
+                usleep(20000);
             }
         }
 
@@ -99,7 +98,7 @@ class Day16 extends ChallangeBase
 
     public function handlePart2()
     {
-
+        // Parse the 'own' ticket into an array of integers
         $this->own_ticket = array_map('intval', explode(',',explode("\n", $this->input[1])[1]));
 
         // Map over all of the rules
@@ -159,8 +158,6 @@ class Day16 extends ChallangeBase
             if($this->showProgress)
                 $this->printPart2Progress();
         }
-
-        // Parse the 'own' ticket into an array of integers
 
         $result = 1;
 
