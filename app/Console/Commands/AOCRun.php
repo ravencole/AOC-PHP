@@ -5,12 +5,20 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 
 use App\Challanges\TwentyFifteen\{
-    Day1 as TwentyFifteenDay1,
-    Day2 as TwentyFifteenDay2,
-    Day3 as TwentyFifteenDay3,
-    Day4 as TwentyFifteenDay4,
-    Day5 as TwentyFifteenDay5,
-    Day6 as TwentyFifteenDay6,
+    Day1  as TwentyFifteenDay1,
+    Day2  as TwentyFifteenDay2,
+    Day3  as TwentyFifteenDay3,
+    Day4  as TwentyFifteenDay4,
+    Day5  as TwentyFifteenDay5,
+    Day6  as TwentyFifteenDay6,
+    Day7  as TwentyFifteenDay7,
+    Day8  as TwentyFifteenDay8,
+    Day9  as TwentyFifteenDay9,
+    Day10 as TwentyFifteenDay10,
+    Day11 as TwentyFifteenDay11,
+    Day12 as TwentyFifteenDay12,
+    Day13 as TwentyFifteenDay13,
+    Day14 as TwentyFifteenDay14,
 };
 
 use App\Challanges\TwentyNineteen\{
@@ -40,6 +48,11 @@ use App\Challanges\TwentyTwenty\{
     Day17 as TwentyTwentyDay17
 };
 
+use App\Challanges\TwentyTwentyOne\{
+    Day1 as TwentyTwentyOneDay1,
+    Day2 as TwentyTwentyOneDay2,
+};
+
 class AOCRun extends Command
 {
     /**
@@ -64,6 +77,14 @@ class AOCRun extends Command
             4  => TwentyFifteenDay4::class,
             5  => TwentyFifteenDay5::class,
             6  => TwentyFifteenDay6::class,
+            7  => TwentyFifteenDay7::class,
+            8  => TwentyFifteenDay8::class,
+            9  => TwentyFifteenDay9::class,
+            10 => TwentyFifteenDay10::class,
+            11 => TwentyFifteenDay11::class,
+            12 => TwentyFifteenDay12::class,
+            13 => TwentyFifteenDay13::class,
+            14 => TwentyFifteenDay14::class,
         ],
         2019 => [
             1  => TwentyNineteenDay1::class,
@@ -89,6 +110,10 @@ class AOCRun extends Command
             15 => TwentyTwentyDay15::class,
             16 => TwentyTwentyDay16::class,
             17 => TwentyTwentyDay17::class
+        ],
+        2021 => [
+            1  => TwentyTwentyOneDay1::class,
+            2  => TwentyTwentyOneDay2::class,
         ]
     ];
 

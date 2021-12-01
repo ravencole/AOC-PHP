@@ -56,8 +56,8 @@ class Day6 extends ChallangeBase
 
             [,$command,$st_x,$st_y,$en_x,$en_y] = $matches;
 
-            for($i = $st_x; $i <= $en_x; $i++) {
-                for($ii = $st_y; $ii <= $en_y; $ii++) {
+            for($i = $st_x; $i <= $en_x; $i++)
+                for($ii = $st_y; $ii <= $en_y; $ii++)
                     switch($command) {
                         case 'turn on':
                             $lights[$i][$ii]++;
@@ -71,8 +71,6 @@ class Day6 extends ChallangeBase
                             $lights[$i][$ii] += 2;
                             break;
                     }
-                }
-            }
         }
 
         return array_reduce($lights, function($a, $b) {
