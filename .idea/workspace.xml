@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyFifteen/Day6.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyFifteen/Day6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" afterDir="false" />
-    </list>
+    <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +219,7 @@
       <workItem from="1635337099473" duration="3679000" />
       <workItem from="1635424768008" duration="2017000" />
       <workItem from="1635771234038" duration="1488000" />
-      <workItem from="1638365610190" duration="1595000" />
+      <workItem from="1638365610190" duration="2194000" />
     </task>
     <servers />
   </component>
