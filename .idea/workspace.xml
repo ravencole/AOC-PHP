@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68b387ed-6c01-4dc7-b852-a8d62b0388fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AOC-PHP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AOC-PHP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyNineteen/Day4.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyNineteen/Day4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwentyOne/Day2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwentyOne/Day2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Challanges/TwentyTwentyTwo/Day5.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Challanges/TwentyTwentyTwo/Day5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/AOCRun.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/inputs/day_2_2021.txt" beforeDir="false" afterPath="$PROJECT_DIR$/storage/inputs/day_2_2021.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +241,7 @@
       <workItem from="1669990558445" duration="6478000" />
       <workItem from="1670083261752" duration="983000" />
       <workItem from="1670594420047" duration="2226000" />
-      <workItem from="1670940483389" duration="5265000" />
+      <workItem from="1670940483389" duration="7541000" />
     </task>
     <servers />
   </component>

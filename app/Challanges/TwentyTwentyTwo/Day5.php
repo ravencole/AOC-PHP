@@ -8,23 +8,21 @@ class Day5 extends ChallangeBase
 {
     public $input;
 
-    public array $stack = [];
+    public array $stack = [
+        1 => 'NBDTVGZJ',
+        2 => 'SRMDWPF',
+        3 => 'VCRSZ',
+        4 => 'RTJZPHG',
+        5 => 'TCJNDZQF',
+        6 => 'NVPWGSFM',
+        7 => 'GCVBPQ',
+        8 => 'ZBPN',
+        9 => 'WPJ',
+    ];
 
     public function _setup($input)
     {
         $this->input = explode("\n", $input);
-
-        $this->stack = [
-            1 => 'NBDTVGZJ',
-            2 => 'SRMDWPF',
-            3 => 'VCRSZ',
-            4 => 'RTJZPHG',
-            5 => 'TCJNDZQF',
-            6 => 'NVPWGSFM',
-            7 => 'GCVBPQ',
-            8 => 'ZBPN',
-            9 => 'WPJ',
-        ];
     }
 
     public function handlePart1()

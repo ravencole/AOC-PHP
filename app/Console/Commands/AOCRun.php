@@ -63,6 +63,7 @@ use App\Challanges\TwentyTwentyTwo\{
     Day3 as TwentyTwentyTwoDay3,
     Day4 as TwentyTwentyTwoDay4,
     Day5 as TwentyTwentyTwoDay5,
+    Day6 as TwentyTwentyTwoDay6,
 };
 
 class AOCRun extends Command
@@ -137,6 +138,7 @@ class AOCRun extends Command
             3  => TwentyTwentyTwoDay3::class,
             4  => TwentyTwentyTwoDay4::class,
             5  => TwentyTwentyTwoDay5::class,
+            6  => TwentyTwentyTwoDay6::class,
         ]
     ];
 
