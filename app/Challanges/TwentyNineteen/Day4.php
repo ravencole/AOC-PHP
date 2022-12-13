@@ -6,9 +6,9 @@ use App\Challanges\ChallangeBase;
 
 class Day4 extends ChallangeBase
 {
-    private $input;
+    public $input;
 
-    public function __construct($input)
+    public function __construct($input, array $extras)
     {
         $this->input = array_map('intval',explode("-", $input));
     }
@@ -60,5 +60,10 @@ class Day4 extends ChallangeBase
         }
 
         return $count;
+    }
+
+    public function _setup($input)
+    {
+        // TODO: Implement _setup() method.
     }
 }

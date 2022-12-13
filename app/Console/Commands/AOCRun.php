@@ -25,7 +25,8 @@ use App\Challanges\TwentyNineteen\{
     Day1 as TwentyNineteenDay1,
     Day2 as TwentyNineteenDay2,
     Day3 as TwentyNineteenDay3,
-    Day4 as TwentyNineteenDay4
+    Day4 as TwentyNineteenDay4,
+    Day5 as TwentyNineteenDay5,
 };
 
 use App\Challanges\TwentyTwenty\{
@@ -51,6 +52,17 @@ use App\Challanges\TwentyTwenty\{
 use App\Challanges\TwentyTwentyOne\{
     Day1 as TwentyTwentyOneDay1,
     Day2 as TwentyTwentyOneDay2,
+    Day3 as TwentyTwentyOneDay3,
+    Day4 as TwentyTwentyOneDay4,
+    Day5 as TwentyTwentyOneDay5,
+};
+
+use App\Challanges\TwentyTwentyTwo\{
+    Day1 as TwentyTwentyTwoDay1,
+    Day2 as TwentyTwentyTwoDay2,
+    Day3 as TwentyTwentyTwoDay3,
+    Day4 as TwentyTwentyTwoDay4,
+    Day5 as TwentyTwentyTwoDay5,
 };
 
 class AOCRun extends Command
@@ -90,7 +102,8 @@ class AOCRun extends Command
             1  => TwentyNineteenDay1::class,
             2  => TwentyNineteenDay2::class,
             3  => TwentyNineteenDay3::class,
-            4  => TwentyNineteenDay4::class
+            4  => TwentyNineteenDay4::class,
+            5  => TwentyNineteenDay5::class,
         ],
         2020 => [
             1  => TwentyTwentyDay1::class,
@@ -114,6 +127,16 @@ class AOCRun extends Command
         2021 => [
             1  => TwentyTwentyOneDay1::class,
             2  => TwentyTwentyOneDay2::class,
+            3  => TwentyTwentyOneDay3::class,
+            4  => TwentyTwentyOneDay4::class,
+            5  => TwentyTwentyOneDay5::class,
+        ],
+        2022 => [
+            1  => TwentyTwentyTwoDay1::class,
+            2  => TwentyTwentyTwoDay2::class,
+            3  => TwentyTwentyTwoDay3::class,
+            4  => TwentyTwentyTwoDay4::class,
+            5  => TwentyTwentyTwoDay5::class,
         ]
     ];
 
